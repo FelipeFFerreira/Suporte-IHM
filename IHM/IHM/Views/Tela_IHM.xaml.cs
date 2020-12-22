@@ -22,5 +22,10 @@ namespace IHM.Views
             BindingContext = modeloApresentacaoIHM = new ModeloApresentacaoIHM();
             InitializeComponent();
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }

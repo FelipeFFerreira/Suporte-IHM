@@ -14,6 +14,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -25,11 +26,25 @@
                 </Grid.ColumnDefinitions>
                 
                 <!--Estrutura Entradas Digitais-->
-                <Grid Grid.Row="0" Grid.Column="0">
+                <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+                    <Frame BackgroundColor="AliceBlue">
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="Default"
+                           Text="Entradas Digitais">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
                     <Frame CornerRadius="5"
                            BackgroundColor="Red"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_1">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
                     </Frame>
                     <Label VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand"
@@ -39,8 +54,208 @@
                            Text="{Binding Path= DigitalInput1.Nome}">
                     </Label>
                 </Grid>
-                      
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_2">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput2.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_3">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput3.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput4.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_5">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput5.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_6">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput6.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_7">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput7.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="3">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="DIGITAL_INPUT_8">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= DigitalInput8.Nome}">
+                    </Label>
+                </Grid>
                 
+                <!--Entradas Analogicas-->
+                <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+                    <Frame BackgroundColor="AliceBlue">
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="Default"
+                           Text="Entradas Analogicas">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="0">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="ANALOGICA_INPUT_1">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= AnalogicaInput1.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="ANALOGICA_INPUT_2">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= AnalogicaInput2.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="2">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="ANALOGICA_INPUT_3">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= AnalogicaInput3.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="3">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="ANALOGICA_INPUT_4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= AnalogicaInput4.Nome}">
+                    </Label>
+                </Grid>
+
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>
