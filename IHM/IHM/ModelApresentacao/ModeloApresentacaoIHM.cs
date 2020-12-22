@@ -9,7 +9,7 @@ using Color = Xamarin.Forms.Color;
 
 namespace IHM.ModelApresentacao
 {
-    public class ConversorSerialInputStatusParaCor : IValueConverter
+    public class ConversorDigitalInputStatusParaCor : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -28,12 +28,12 @@ namespace IHM.ModelApresentacao
         }
     }
 
-    public class SerialInput : INotifyPropertyChanged
+    public class DigitalInput : INotifyPropertyChanged
     {
         private string nome;
         private bool status;
 
-        public SerialInput(
+        public DigitalInput(
             string nome,
             bool status)
         {
@@ -74,41 +74,41 @@ namespace IHM.ModelApresentacao
 
     class ModeloApresentacaoIHM
     {
-        public SerialInput SerialInput1 { get; } = new SerialInput("I1", false);
-        public SerialInput SerialInput2 { get; } = new SerialInput("I2", false);
-        public SerialInput SerialInput3 { get; } = new SerialInput("I3", false);
-        public SerialInput SerialInput4 { get; } = new SerialInput("I4", false);
-        public SerialInput SerialInput5 { get; } = new SerialInput("I5", false);
-        public SerialInput SerialInput6 { get; } = new SerialInput("I6", false);
-        public SerialInput SerialInput7 { get; } = new SerialInput("I7", false);
-        public SerialInput SerialInput8 { get; } = new SerialInput("I8", false);
-        private List<SerialInput> ListSerialInputs = new List<SerialInput>();
+        public DigitalInput DigitalInput1 { get; } = new DigitalInput("I1", false);
+        public DigitalInput DigitalInput2 { get; } = new DigitalInput("I2", false);
+        public DigitalInput DigitalInput3 { get; } = new DigitalInput("I3", false);
+        public DigitalInput DigitalInput4 { get; } = new DigitalInput("I4", false);
+        public DigitalInput DigitalInput5 { get; } = new DigitalInput("I5", false);
+        public DigitalInput DigitalInput6 { get; } = new DigitalInput("I6", false);
+        public DigitalInput DigitalInput7 { get; } = new DigitalInput("I7", false);
+        public DigitalInput DigitalInput8 { get; } = new DigitalInput("I8", false);
+        private List<DigitalInput> ListDigitalInputs = new List<DigitalInput>();
 
         public ModeloApresentacaoIHM()
         {
-            ListSerialInputs = new List<SerialInput>()
+            ListDigitalInputs = new List<DigitalInput>()
             {
-                SerialInput1,
-                SerialInput2,
-                SerialInput3,
-                SerialInput4,
-                SerialInput5,
-                SerialInput6,
-                SerialInput7,
-                SerialInput8,
+                DigitalInput1,
+                DigitalInput2,
+                DigitalInput3,
+                DigitalInput4,
+                DigitalInput5,
+                DigitalInput6,
+                DigitalInput7,
+                DigitalInput8,
             };
 
-            foreach (SerialInput item in ListSerialInputs)
+            foreach (DigitalInput item in ListDigitalInputs)
             {
-                item.PropertyChanged += SerialInput_PropertyChanged;
+                item.PropertyChanged += DigitalInput_PropertyChanged;
 
             }
         }
 
-        private void SerialInput_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void DigitalInput_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if ((sender is SerialInput serialInput) && (e.PropertyName == nameof(SerialInput.Status))) ;
-                //Enviar(string.Format("{0}_{1}\0", serialInput.Nome, serialInput.Status ? 1 : 0));
+            if ((sender is DigitalInput DigitalInput) && (e.PropertyName == nameof(DigitalInput.Status))) ;
+                //Enviar(string.Format("{0}_{1}\0", DigitalInput.Nome, DigitalInput.Status ? 1 : 0));
         }
 
     }

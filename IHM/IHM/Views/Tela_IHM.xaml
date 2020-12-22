@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:apresentacao ="clr-namespace:IHM.ModelApresentacao"
              x:Class="IHM.Views.Tela_IHM">
     <ContentPage.Content>
         <StackLayout>
@@ -28,14 +29,14 @@
                     <Frame CornerRadius="5"
                            BackgroundColor="Red"
                            HasShadow="true"
-                           x:Name="Input_1">
+                           x:Name="DIGITAL_INPUT_1">
                     </Frame>
                     <Label VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand"
                            FontAttributes="Bold"
                            TextColor="White"
                            FontSize="Large"
-                           Text="I1">
+                           Text="{Binding Path= DigitalInput1.Nome}">
                     </Label>
                 </Grid>
                       
