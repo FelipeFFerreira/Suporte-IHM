@@ -1,14 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:apresentacao ="clr-namespace:IHM.ModelApresentacao"
-             x:Class="IHM.Views.Tela_IHM">
+             xmlns:apresentacao ="clr-namespace:IHM.Views"
+             xmlns:views="clr-namespace:IHM.Views"
+             x:Class="IHM.Views.Tela_IHM"
+             BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="Nenhum">
+            <Label Text="Nada foi selecionado"/>
+        </DataTemplate>
+        <DataTemplate x:Key="ExpTransistorOutputs">
+            <apresentacao:ExpanderTransistorOutput TransistorOutput="{Binding Path=.}"/>
+        </DataTemplate>
+
+        <views:OpcaoEscolhaTemplateSelector x:Key="opcaoEscolhaTemplateSelector"
+                                            ExpanderTransistorOutput="{StaticResource ExpTransistorOutputs}"
+                                            Nenhum="{StaticResource Nenhum}">
+            
+        </views:OpcaoEscolhaTemplateSelector>
+        
+        
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Grid RowSpacing="2"
-                  ColumnSpacing="2"
+            <Grid RowSpacing="4"
+                  ColumnSpacing="4"
                   BackgroundColor="White">
                 <Grid.RowDefinitions>
+                    <RowDefinition />
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -254,9 +273,156 @@
                            Text="{Binding Path= AnalogicaInput4.Nome}">
                     </Label>
                 </Grid>
-
-
+                
+                <!--Saindas de potencia-->
+                <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4">
+                    <Frame BackgroundColor="AliceBlue">
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="Default"
+                           Text="Saidas de Potencia">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="0">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_1">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput1.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="1">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_2">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput2.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="2">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_3">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput3.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="3">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput4.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="0">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_5">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput5.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="1">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_6">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput6.Nome}">
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="2">
+                    <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_7">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput7.Nome}">
+                    </Label>
+                </Grid>
+            <Grid Grid.Row="7" Grid.Column="3">
+                <Frame CornerRadius="5"
+                           BackgroundColor="Red"
+                           HasShadow="true"
+                           x:Name="TRANSISTOR_OUTPUT_8">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           FontSize="Large"
+                           Text="{Binding Path= TransistorOutput8.Nome}">
+                </Label>
             </Grid>
-        </StackLayout>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

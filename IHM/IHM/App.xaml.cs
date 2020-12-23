@@ -9,6 +9,8 @@ namespace IHM
     {
         public App()
         {
+            Device.SetFlags(new string[] { "Expander_Experimental" });
+
             InitializeComponent();
 
             MainPage = new Tela_IHM();

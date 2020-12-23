@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IHM.Views.ExpanderTransistorOutput"
+             x:Name="expanderTransistorOutput">
+  <ContentView.Content>
+      <StackLayout>
+            <Expander IsExpanded="True">
+                <Expander.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"
+                           Text="Output Transistor - "
+                           TextColor="Black"
+                           FontSize="20"
+                           FontAttributes="Bold"/>
+                        <Label Grid.Column="1"
+                           TextColor="Black"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           Text="{Binding Path=TransistorOutput.Nome,
+                           Source={x:Reference expanderTransistorOutput}}"/>
+                        <Image  Grid.Column="2"
+                                Source="expander.png"                              
+                                HorizontalOptions="End"
+                                VerticalOptions="Start"
+                                Margin="0,12,80,0">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image"
+                                         Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}},
+                                                   Path=IsExpanded}"
+                                                   Value="True">
+                                    <Setter Property="Source"
+                                                   Value="collapse.png" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                    </Grid>
+                </Expander.Header>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0"
+                               Text="PWM: "
+                               TextColor="Black"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Margin="0, 12, 80, 0">
+                        </Label>
+                        <Label Grid.Row="0" Grid.Column="1"
+                               Text="{Binding Path=TransistorOutput.PorcPwm,
+                               Source={x:Reference expanderTransistorOutput}}" 
+                               TextColor="Black"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Margin="0, 12, 80, 0">
+                        </Label>
+                    </Grid>
+                </StackLayout>
+            </Expander>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

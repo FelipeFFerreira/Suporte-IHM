@@ -47,6 +47,7 @@ namespace IHM.ModelApresentacao
         public TransistorOutput TransistorOutput5 { get; } = new TransistorOutput("O5", false, 0, 0);
         public TransistorOutput TransistorOutput6 { get; } = new TransistorOutput("O6", false, 0, 0);
         public TransistorOutput TransistorOutput7 { get; } = new TransistorOutput("O7", false, 0, 0);
+        public TransistorOutput TransistorOutput8 { get; } = new TransistorOutput("O8", false, 0, 0);
 
         public AnalogicalInput AnalogicaInput1 { get; } = new AnalogicalInput("A1", false, 0);
         public AnalogicalInput AnalogicaInput2 { get; } = new AnalogicalInput("A2", false, 0);
@@ -55,7 +56,7 @@ namespace IHM.ModelApresentacao
 
         private List<AnalogicalInput> ListAnalogicalInputs = new List<AnalogicalInput>();
         private List<DigitalInput> ListDigitalInputs = new List<DigitalInput>();
-        private List<TransistorOutput> ListtransistorOutputs = new List<TransistorOutput>();
+        private List<TransistorOutput> ListTransistorOutputs = new List<TransistorOutput>();
 
         public ModeloApresentacaoIHM()
         {
@@ -77,6 +78,18 @@ namespace IHM.ModelApresentacao
                 AnalogicaInput2,
                 AnalogicaInput3,
                 AnalogicaInput4,
+            };
+
+            ListTransistorOutputs = new List<TransistorOutput>()
+            {
+                TransistorOutput1,
+                TransistorOutput2,
+                TransistorOutput3,
+                TransistorOutput4,
+                TransistorOutput5,
+                TransistorOutput6,
+                TransistorOutput7,
+                TransistorOutput8,
             };
 
             foreach (DigitalInput item in ListDigitalInputs)

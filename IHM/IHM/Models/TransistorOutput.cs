@@ -25,6 +25,11 @@ namespace IHM.Models
             Status = status;           
         }
 
+        public TransistorOutput()
+        {
+            
+        }
+
         public string Nome
         {
             get { return nome; }
