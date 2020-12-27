@@ -70,7 +70,7 @@
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_1">
                         <Frame.GestureRecognizers>
@@ -87,7 +87,7 @@
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_2">
                         <Frame.GestureRecognizers>
@@ -104,7 +104,7 @@
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="2">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_3">
                         <Frame.GestureRecognizers>
@@ -121,7 +121,7 @@
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="3">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_4">
                         <Frame.GestureRecognizers>
@@ -138,7 +138,7 @@
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="0">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_5">
                         <Frame.GestureRecognizers>
@@ -155,7 +155,7 @@
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="1">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_6">
                         <Frame.GestureRecognizers>
@@ -172,7 +172,7 @@
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="2">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_7">
                         <Frame.GestureRecognizers>
@@ -189,7 +189,7 @@
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="3">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corDigitalInput}"
                            HasShadow="true"
                            x:Name="DIGITAL_INPUT_8">
                         <Frame.GestureRecognizers>
@@ -300,7 +300,7 @@
                 </Grid>
                 <Grid Grid.Row="6" Grid.Column="0">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_1"
                            BindingContext="{Binding Path=TransistorOutput1}">
@@ -318,7 +318,7 @@
                 </Grid>
                 <Grid Grid.Row="6" Grid.Column="1">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_2"
                            BindingContext="{Binding Path=TransistorOutput2}">
@@ -336,7 +336,7 @@
                 </Grid>
                 <Grid Grid.Row="6" Grid.Column="2">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_3">
                         <Frame.GestureRecognizers>
@@ -353,7 +353,7 @@
                 </Grid>
                 <Grid Grid.Row="6" Grid.Column="3">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_4">
                         <Frame.GestureRecognizers>
@@ -370,7 +370,7 @@
                 </Grid>
                 <Grid Grid.Row="7" Grid.Column="0">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_5">
                         <Frame.GestureRecognizers>
@@ -387,7 +387,7 @@
                 </Grid>
                 <Grid Grid.Row="7" Grid.Column="1">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_6">
                         <Frame.GestureRecognizers>
@@ -404,7 +404,7 @@
                 </Grid>
                 <Grid Grid.Row="7" Grid.Column="2">
                     <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_7">
                         <Frame.GestureRecognizers>
@@ -421,7 +421,7 @@
                 </Grid>
             <Grid Grid.Row="7" Grid.Column="3">
                 <Frame CornerRadius="5"
-                           BackgroundColor="Red"
+                           BackgroundColor="{StaticResource corTransistorOutput}"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_8">
                     <Frame.GestureRecognizers>
