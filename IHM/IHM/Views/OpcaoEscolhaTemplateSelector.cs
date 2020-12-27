@@ -10,7 +10,6 @@ namespace IHM.Views
     {
         public DataTemplate Nenhum { get; set; }
         public DataTemplate ExpanderTransistorOutput { get; set; }
-
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             if (item is TransistorOutput)

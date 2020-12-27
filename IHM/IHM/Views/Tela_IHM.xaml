@@ -2,25 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:apresentacao ="clr-namespace:IHM.Views"
+             xmlns:local="clr-namespace:IHM.ViewModels"
+             xmlns:controls="clr-namespace:IHM.ModelApresentacao.Controls"
              xmlns:views="clr-namespace:IHM.Views"
+ 
              x:Class="IHM.Views.Tela_IHM"
              BackgroundColor="White">
+    <!--<ContentPage.BindingContext>
+        <local:TransistorOutputViewModel/>
+    </ContentPage.BindingContext>-->
 
     <ContentPage.Resources>
-        <DataTemplate x:Key="Nenhum">
-            <Label Text="Nada foi selecionado"/>
-        </DataTemplate>
-        <DataTemplate x:Key="ExpTransistorOutputs">
+        <DataTemplate x:Key="SaidaTransistorTemplate">
             <apresentacao:ExpanderTransistorOutput TransistorOutput="{Binding Path=.}"/>
         </DataTemplate>
+        <DataTemplate x:Key="Nenhum">
+            <Label Text="nenhum"/>
+        </DataTemplate>
 
-        <views:OpcaoEscolhaTemplateSelector x:Key="opcaoEscolhaTemplateSelector"
-                                            ExpanderTransistorOutput="{StaticResource ExpTransistorOutputs}"
-                                            Nenhum="{StaticResource Nenhum}">
-            
-        </views:OpcaoEscolhaTemplateSelector>
-        
-        
+        <views:OpcaoEscolhaTemplateSelector x:Key="OpcaoEscolhaTemplateSelector"
+                                                       ExpanderTransistorOutput="{StaticResource SaidaTransistorTemplate}"
+                                                       Nenhum="{StaticResource Nenhum}"/>
+
     </ContentPage.Resources>
     <ContentPage.Content>
             <Grid RowSpacing="4"
@@ -43,7 +46,16 @@
                     <ColumnDefinition Width="3"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                
+
+            <Grid Grid.Row="0"
+                      Grid.RowSpan="7"
+                      Grid.Column="5"
+                      BackgroundColor="#91COBB">
+                <StackLayout Margin="10"
+                 BindableLayout.ItemsSource="{Binding TransistorOutputs_}"
+                 BindableLayout.ItemTemplate="{StaticResource SaidaTransistorTemplate}" />
+
+            </Grid>
                 <!--Estrutura Entradas Digitais-->
                 <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
                     <Frame BackgroundColor="AliceBlue">
@@ -290,7 +302,8 @@
                     <Frame CornerRadius="5"
                            BackgroundColor="Red"
                            HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_1">
+                           x:Name="TRANSISTOR_OUTPUT_1"
+                           BindingContext="{Binding Path=TransistorOutput1.Nome}">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </Frame.GestureRecognizers>

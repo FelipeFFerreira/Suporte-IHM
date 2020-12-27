@@ -5,24 +5,30 @@ using System.Text;
 
 namespace IHM.Models
 {
-    class TransistorOutput
+    public class TransistorOutput
     {
         private int porcPwm;
+
         private int frequencia;
+
         private bool status;
+
         private string nome;
+        private string descricao { get; set; }
 
         public TransistorOutput(
             string nome,
             bool status,
             int porcPwm,
-            int frequencia
+            int frequencia,
+            string description
             )
         {
             Nome = nome;
             PorcPwm = porcPwm;
             Frequencia = frequencia;
-            Status = status;           
+            Status = status;
+            descricao = description;
         }
 
         public TransistorOutput()
@@ -78,6 +84,20 @@ namespace IHM.Models
                 if (status != value)
                 {
                     status = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Status)));
+                }
+            }
+        }
+
+        public string Descricao
+        {
+            get { return descricao; }
+
+            set
+            {
+                if (descricao != value)
+                {
+                    descricao = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Status)));
                 }
             }

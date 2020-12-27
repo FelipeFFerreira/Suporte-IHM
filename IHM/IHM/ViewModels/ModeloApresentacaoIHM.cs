@@ -40,16 +40,9 @@ namespace IHM.ModelApresentacao
         public DigitalInput DigitalInput7 { get; } = new DigitalInput("I7", false);
         public DigitalInput DigitalInput8 { get; } = new DigitalInput("I8", false);
 
-        public TransistorOutput TransistorOutput1 { get; } = new TransistorOutput("O1", false, 0, 0);
-        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O2", false, 0, 0);
-        public TransistorOutput TransistorOutput3 { get; } = new TransistorOutput("O3", false, 0, 0);
-        public TransistorOutput TransistorOutput4 { get; } = new TransistorOutput("O4", false, 0, 0);
-        public TransistorOutput TransistorOutput5 { get; } = new TransistorOutput("O5", false, 0, 0);
-        public TransistorOutput TransistorOutput6 { get; } = new TransistorOutput("O6", false, 0, 0);
-        public TransistorOutput TransistorOutput7 { get; } = new TransistorOutput("O7", false, 0, 0);
-        public TransistorOutput TransistorOutput8 { get; } = new TransistorOutput("O8", false, 0, 0);
+      
 
-        public AnalogicalInput AnalogicaInput1 { get; } = new AnalogicalInput("A1", false, 0);
+        public AnalogicalInput AnalogicaInput1 { get; } = new AnalogicalInput("A1", false, 100);
         public AnalogicalInput AnalogicaInput2 { get; } = new AnalogicalInput("A2", false, 0);
         public AnalogicalInput AnalogicaInput3 { get; } = new AnalogicalInput("A3", false, 0);
         public AnalogicalInput AnalogicaInput4 { get; } = new AnalogicalInput("A4", false, 0);
@@ -80,17 +73,7 @@ namespace IHM.ModelApresentacao
                 AnalogicaInput4,
             };
 
-            ListTransistorOutputs = new List<TransistorOutput>()
-            {
-                TransistorOutput1,
-                TransistorOutput2,
-                TransistorOutput3,
-                TransistorOutput4,
-                TransistorOutput5,
-                TransistorOutput6,
-                TransistorOutput7,
-                TransistorOutput8,
-            };
+         
 
             foreach (DigitalInput item in ListDigitalInputs)
             {
@@ -106,13 +89,13 @@ namespace IHM.ModelApresentacao
 
         private void DigitalInput_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if ((sender is DigitalInput DigitalInput) && (e.PropertyName == nameof(DigitalInput.Status)));
+            //if ((sender is DigitalInput DigitalInput) && (e.PropertyName == nameof(DigitalInput.Status)));
                //Enviar(string.Format("{0}_{1}\0", DigitalInput.Nome, DigitalInput.Status ? 1 : 0));
         }
 
         private void AnalogicolInput_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if ((sender is AnalogicalInput DigitalInput) && (e.PropertyName == nameof(AnalogicalInput.Value)));
+            //if ((sender is AnalogicalInput DigitalInput) && (e.PropertyName == nameof(AnalogicalInput.Value)));
             //Enviar(string.Format("{0}_{1}\0", DigitalInput.Nome, DigitalInput.Status ? 1 : 0));
         }
 

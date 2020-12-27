@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using IHM.ModelApresentacao;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using IHM.ViewModels;
 
 namespace IHM.Views
 {
@@ -14,17 +16,18 @@ namespace IHM.Views
     public partial class Tela_IHM : ContentPage
     {
         SynchronizationContext synchronizationContext;
-        ModeloApresentacaoIHM modeloApresentacaoIHM;
-
+        TransistorOutputViewModel modeloApresentacao;
         public Tela_IHM()
         {
             synchronizationContext = SynchronizationContext.Current;
-            BindingContext = modeloApresentacaoIHM = new ModeloApresentacaoIHM();
+            BindingContext = modeloApresentacao = new TransistorOutputViewModel();
             InitializeComponent();
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            if (sender is BindableObject bindableObject)
+                modeloApresentacao.Search(bindableObject.BindingContext);
 
         }
     }
