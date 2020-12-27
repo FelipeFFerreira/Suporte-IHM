@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:apresentacao ="clr-namespace:IHM.Views"
-             xmlns:local="clr-namespace:IHM.ViewModels"
-             xmlns:controls="clr-namespace:IHM.ModelApresentacao.Controls"
-             xmlns:views="clr-namespace:IHM.Views"
- 
+             xmlns:apresentacao ="clr-namespace:IHM.Views" 
              x:Class="IHM.Views.Tela_IHM"
              BackgroundColor="White">
-    <!--<ContentPage.BindingContext>
-        <local:TransistorOutputViewModel/>
-    </ContentPage.BindingContext>-->
 
     <ContentPage.Resources>
         <DataTemplate x:Key="TransistorOutputTemplate">
@@ -21,7 +14,6 @@
         </DataTemplate>
 
         
-
     </ContentPage.Resources>
     <ContentPage.Content>
             <Grid RowSpacing="4"

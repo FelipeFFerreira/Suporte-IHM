@@ -11,7 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controls\CtrTransitorOutput.cs" />
+    <Compile Remove="Controls\**" />
+    <EmbeddedResource Remove="Controls\**" />
+    <None Remove="Controls\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\ModelApresentacaoDadosPage.cs" />
   </ItemGroup>
 
   <ItemGroup>
