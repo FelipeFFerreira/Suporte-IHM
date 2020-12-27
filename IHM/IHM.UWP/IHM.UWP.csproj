@@ -133,6 +133,8 @@
     <Content Include="collapse.PNG" />
     <Content Include="expander.PNG" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="transistor.png" />
+    <Content Include="transistor_icone.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

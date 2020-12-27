@@ -15,16 +15,111 @@
                    VerticalOptions="Center">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="75" />
-                        <RowDefinition Height="4" />
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="5" />
                     </Grid.RowDefinitions>
-                    <Label Text="{Binding Path=TransistorOutput.Nome,
-                           Source={x:Reference expanderTransistorOutput}}"
-                           FontAttributes="Bold"
-                           FontSize="Large"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Start" />
+                    <Grid Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Margin="0,0,0,10"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span  
+                                              Text="Transitor Saida: "
+                                              TextColor="Black" 
+                                              FontSize="Body"
+                                              FontAttributes="Bold"/>
+                                            <Span Text="{Binding Path=TransistorOutput.Nome,
+                                              Source={x:Reference expanderTransistorOutput}}"
+                                              TextColor="Black" 
+                                              FontSize="14"
+                                              FontAttributes="Bold"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Margin="0,0,0,10"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span  
+                                              Text="Porc Pwm: "
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                            <Span Text="{Binding Path=TransistorOutput.PorcPwm,
+                                              Source={x:Reference expanderTransistorOutput}}"
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="2"
+                                   Grid.Column="0"
+                                   Margin="0,0,0,10"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span  
+                                              Text="Frequencia: "
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                            <Span Text="{Binding Path=TransistorOutput.Frequencia,
+                                              Source={x:Reference expanderTransistorOutput}}"
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="3"
+                                   Grid.Column="0"
+                                   Margin="0,0,0,10"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span  
+                                              Text="Status: "
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                            <Span Text="{Binding Path=TransistorOutput.Status,
+                                              Source={x:Reference expanderTransistorOutput}}"
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Image Grid.Row="0"
+                                   Grid.RowSpan="3"
+                                   Grid.Column="2"
+                                  Source="transistor_icone.png">
+                            </Image>
+                        </Grid>
+                    </Grid>
+                    
+                        
                     <BoxView Grid.Row="1"
                              BackgroundColor="{Binding Path= BorderColor,
                              Source={x:Reference expanderTransistorOutput}}"

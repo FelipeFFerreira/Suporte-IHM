@@ -7,8 +7,8 @@ namespace IHM.ViewModels
 {
     public class TransistorOutputViewModel
     {
-        public TransistorOutput TransistorOutput1 { get; } = new TransistorOutput("O.1", false, 150, 0, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
-        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O.2", false, 150, 0, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
+        public TransistorOutput TransistorOutput1 { get; } = new TransistorOutput("O.1", false, 150, 200, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
+        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O.2", true, 160, 210, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
 
         public ObservableCollection<TransistorOutput> TransistorOutputs { get; set; }
         public ObservableCollection<TransistorOutput> TransistorOutputs_ { get; set; } = new ObservableCollection<TransistorOutput>();
