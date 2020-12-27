@@ -320,7 +320,8 @@
                     <Frame CornerRadius="5"
                            BackgroundColor="Red"
                            HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_2">
+                           x:Name="TRANSISTOR_OUTPUT_2"
+                           BindingContext="{Binding Path=TransistorOutput2}">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </Frame.GestureRecognizers>

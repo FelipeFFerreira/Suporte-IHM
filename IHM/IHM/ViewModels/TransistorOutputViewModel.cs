@@ -8,7 +8,7 @@ namespace IHM.ViewModels
     public class TransistorOutputViewModel
     {
         public TransistorOutput TransistorOutput1 { get; } = new TransistorOutput("O.1", false, 150, 0, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
-        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O.1", false, 150, 0, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
+        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O.2", false, 150, 0, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
 
         public ObservableCollection<TransistorOutput> TransistorOutputs { get; set; }
         public ObservableCollection<TransistorOutput> TransistorOutputs_ { get; set; } = new ObservableCollection<TransistorOutput>();
@@ -36,7 +36,11 @@ namespace IHM.ViewModels
         private void SearchComponenteEndAtribui(object item)
         {
             if (item is TransistorOutput transistorOutput)
-                 TransistorOutputs_.Add(SearchTransistorOutput(transistorOutput));                
+            {
+                if (TransistorOutputs_.Count > 0)
+                    TransistorOutputs_.Remove(TransistorOutputs_[0]);
+                TransistorOutputs_.Add(SearchTransistorOutput(transistorOutput));
+            }
         }
         public void AtribuiComponenteSelecionado(object item)
         { 
