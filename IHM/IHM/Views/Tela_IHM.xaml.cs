@@ -27,7 +27,7 @@ namespace IHM.Views
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             if (sender is BindableObject bindableObject)
-                modeloApresentacao.Search(bindableObject.BindingContext);
+                modeloApresentacao.AtribuiComponenteSelecionado(bindableObject.BindingContext);
 
         }
     }

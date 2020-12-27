@@ -33,15 +33,25 @@ namespace IHM.ViewModels
 
         }
 
-        public void Search(object transistor)
+        private void SearchComponenteEndAtribui(object item)
         {
-            string t = (string)transistor;
+            if (item is TransistorOutput transistorOutput)
+                 TransistorOutputs_.Add(SearchTransistorOutput(transistorOutput));                
+        }
+        public void AtribuiComponenteSelecionado(object item)
+        { 
+            SearchComponenteEndAtribui(item);      
+        }
+
+        public TransistorOutput SearchTransistorOutput(TransistorOutput t)
+        {
+
             foreach (var item in TransistorOutputs)
             {
-                if (String.Compare(t, item.Nome) == 0)
-                    TransistorOutputs_.Add(item);
-
+                if (String.Compare(t.Nome, item.Nome) == 0)
+                    return item;
             }
+            return null;
         }
     }
 

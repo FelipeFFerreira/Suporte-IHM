@@ -303,7 +303,7 @@
                            BackgroundColor="Red"
                            HasShadow="true"
                            x:Name="TRANSISTOR_OUTPUT_1"
-                           BindingContext="{Binding Path=TransistorOutput1.Nome}">
+                           BindingContext="{Binding Path=TransistorOutput1}">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </Frame.GestureRecognizers>
