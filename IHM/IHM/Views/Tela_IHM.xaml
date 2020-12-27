@@ -36,403 +36,504 @@
                     <ColumnDefinition Width="3"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-
+              
+             <!--Estrutura painel-->
             <Grid Grid.Row="0"
-                      Grid.RowSpan="7"
-                      Grid.Column="5"
-                      BackgroundColor="#91COBB">
+                  Grid.RowSpan="7"
+                  Grid.Column="5"
+                  BackgroundColor="#91COBB">
                 <StackLayout Margin="10"
-                 BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
-                 BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}" />
-
+                    BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
+                    BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}" />
             </Grid>
-                <!--Estrutura Entradas Digitais-->
-                <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
-                    <Frame BackgroundColor="AliceBlue">
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="Default"
-                           Text="Entradas Digitais">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="0">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_1">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput1.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="1">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_2">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput2.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="2">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_3">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput3.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="3">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_4">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput4.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="0">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_5">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput5.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="1">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_6">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput6.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="2">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput7.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="3">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corDigitalInput}"
-                           HasShadow="true"
-                           x:Name="DIGITAL_INPUT_8">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= DigitalInput8.Nome}">
-                    </Label>
-                </Grid>
                 
-                <!--Entradas Analogicas-->
-                <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-                    <Frame BackgroundColor="AliceBlue">
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="Default"
-                           Text="Entradas Analogicas">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="4" Grid.Column="0">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="Red"
-                           HasShadow="true"
-                           x:Name="ANALOGICA_INPUT_1">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= AnalogicaInput1.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="4" Grid.Column="1">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="Red"
-                           HasShadow="true"
-                           x:Name="ANALOGICA_INPUT_2">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= AnalogicaInput2.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="4" Grid.Column="2">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="Red"
-                           HasShadow="true"
-                           x:Name="ANALOGICA_INPUT_3">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= AnalogicaInput3.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="4" Grid.Column="3">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="Red"
-                           HasShadow="true"
-                           x:Name="ANALOGICA_INPUT_4">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= AnalogicaInput4.Nome}">
-                    </Label>
-                </Grid>
-                
-                <!--Saindas de potencia-->
-                <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4">
-                    <Frame BackgroundColor="AliceBlue">
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="Default"
-                           Text="Saidas de Potencia">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="6" Grid.Column="0">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_1"
-                           BindingContext="{Binding Path=TransistorOutput1}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= TransistorOutput1.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="6" Grid.Column="1">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_2"
-                           BindingContext="{Binding Path=TransistorOutput2}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= TransistorOutput2.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="6" Grid.Column="2">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_3"
-                           BindingContext="{Binding Path=TransistorOutput3}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path=TransistorOutput3.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="6" Grid.Column="3">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_4"
-                           BindingContext="{Binding Path=TransistorOutput4}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= TransistorOutput4.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="7" Grid.Column="0">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_5"
-                           BindingContext="{Binding Path=TransistorOutput5}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= TransistorOutput5.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="7" Grid.Column="1">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_6"
-                           BindingContext="{Binding Path=TransistorOutput6}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path=TransistorOutput6.Nome}">
-                    </Label>
-                </Grid>
-                <Grid Grid.Row="7" Grid.Column="2">
-                    <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_7"
-                           BindingContext="{Binding Path=TransistorOutput7}">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                    <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path= TransistorOutput7.Nome}">
-                    </Label>
-                </Grid>
-            <Grid Grid.Row="7" Grid.Column="3">
+                   <!--Estrutura Entradas Digitais-->
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+                <Frame BackgroundColor="AliceBlue"/>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Italic"
+                       TextColor="Black"
+                       FontSize="Default"
+                       Text="Entradas Digitais">
+                </Label>
+            </Grid>
+            <Grid Grid.Row="1"
+                  Grid.Column="0"
+                  BindingContext="{Binding Path=DigitalInput1}">
                 <Frame CornerRadius="5"
-                           BackgroundColor="{StaticResource corTransistorOutput}"
-                           HasShadow="true"
-                           x:Name="TRANSISTOR_OUTPUT_8"
-                           BindingContext="{Binding Path=TransistorOutput8}">
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_1">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
                 <Label VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           FontSize="Large"
-                           Text="{Binding Path=TransistorOutput8.Nome}">
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
                 </Label>
             </Grid>
-
+            <Grid Grid.Row="1"
+                  Grid.Column="1"
+                  BindingContext="{Binding Path=DigitalInput2}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_2">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="1"
+                  Grid.Column="2"
+                  BindingContext="{Binding Path=DigitalInput3}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_3">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="1"
+                  Grid.Column="3"
+                  BindingContext="{Binding Path=DigitalInput4}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_4">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="2"
+                  Grid.Column="0"
+                  BindingContext="{Binding Path=DigitalInput5}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_5">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="2"
+                  Grid.Column="1"
+                  BindingContext="{Binding Path=DigitalInput6}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_6">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="2"
+                  Grid.Column="2"
+                  BindingContext="{Binding Path=DigitalInput7}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_7">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="2"
+                  Grid.Column="3"
+                  BindingContext="{Binding Path=DigitalInput8}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corDigitalInput}"
+                       HasShadow="true"
+                       x:Name="DIGITAL_INPUT_8">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>    
+                        <!--Entradas Analogicas-->
+            <Grid Grid.Row="3"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="4">
+                <Frame BackgroundColor="AliceBlue"/>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Italic"
+                       TextColor="Black"
+                       FontSize="Default"
+                       Text="Entradas Analogicas">
+                </Label>
+            </Grid>
+            <Grid Grid.Row="4"
+                  Grid.Column="0"
+                  BindingContext="{Binding AnalogicaInput1}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="Red"
+                       HasShadow="true"
+                       x:Name="ANALOGICA_INPUT_1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="4"
+                  Grid.Column="1"
+                  BindingContext="{Binding AnalogicaInput2}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="Red"
+                       HasShadow="true"
+                       x:Name="ANALOGICA_INPUT_2">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="4"
+                  Grid.Column="2"
+                  BindingContext="{Binding AnalogicaInput3}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="Red"
+                       HasShadow="true"
+                       x:Name="ANALOGICA_INPUT_3">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="4"
+                  Grid.Column="3"
+                  BindingContext="{Binding AnalogicaInput4}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="Red"
+                       HasShadow="true"
+                       x:Name="ANALOGICA_INPUT_4">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+                        <!--Saindas de potencia-->
+            <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4">
+                <Frame BackgroundColor="AliceBlue"/>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Italic"
+                       TextColor="Black"
+                       FontSize="Default"
+                       Text="Saidas de Potencia">
+                </Label>
+            </Grid>
+            <Grid Grid.Row="6"
+                  Grid.Column="0"
+                  BindingContext="{Binding Path=TransistorOutput1}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                    </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                    </Label>
+            </Grid>
+            <Grid Grid.Row="6"
+                  Grid.Column="1"
+                  BindingContext="{Binding Path=TransistorOutput2}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_2">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="6"
+                  Grid.Column="2"
+                  BindingContext="{Binding Path=TransistorOutput3}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_3">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="6"
+                  Grid.Column="3"
+                  BindingContext="{Binding Path=TransistorOutput4}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_4">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="7"
+                  Grid.Column="0"
+                  BindingContext="{Binding Path=TransistorOutput5}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_5">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="7"
+                  Grid.Column="1"
+                  BindingContext="{Binding Path=TransistorOutput6}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_6">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="7"
+                  Grid.Column="2"
+                  BindingContext="{Binding Path=TransistorOutput7}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_7">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="7"
+                  Grid.Column="3"
+                  BindingContext="{Binding Path=TransistorOutput8}">
+                <Frame CornerRadius="5"
+                       BackgroundColor="{StaticResource corTransistorOutput}"
+                       HasShadow="true"
+                       x:Name="TRANSISTOR_OUTPUT_8">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="Large"
+                       Text="{Binding Nome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
