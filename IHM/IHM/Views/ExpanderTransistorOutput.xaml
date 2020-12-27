@@ -21,13 +21,13 @@
                     <Grid Grid.Row="0">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="0"
                                    Grid.Column="0"
@@ -45,7 +45,7 @@
                                             <Span Text="{Binding Path=TransistorOutput.Nome,
                                               Source={x:Reference expanderTransistorOutput}}"
                                               TextColor="Black" 
-                                              FontSize="14"
+                                              FontSize="Caption"
                                               FontAttributes="Bold"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -62,11 +62,13 @@
                                             <Span  
                                               Text="Porc Pwm: "
                                               TextColor="Black" 
-                                              FontSize="14"/>
+                                              FontSize="14"
+                                              FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.PorcPwm,
                                               Source={x:Reference expanderTransistorOutput}}"
                                               TextColor="Black" 
-                                              FontSize="14"/>
+                                              FontSize="14"
+                                              FontAttributes="None"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
                                 </Label.FormattedText>
@@ -82,7 +84,8 @@
                                             <Span  
                                               Text="Frequencia: "
                                               TextColor="Black" 
-                                              FontSize="14"/>
+                                              FontSize="14"
+                                              FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Frequencia,
                                               Source={x:Reference expanderTransistorOutput}}"
                                               TextColor="Black" 
@@ -102,7 +105,8 @@
                                             <Span  
                                               Text="Status: "
                                               TextColor="Black" 
-                                              FontSize="14"/>
+                                              FontSize="14"
+                                              FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Status,
                                               Source={x:Reference expanderTransistorOutput}}"
                                               TextColor="Black" 
@@ -118,20 +122,61 @@
                             </Image>
                         </Grid>
                     </Grid>
-                    
-                        
+                     
                     <BoxView Grid.Row="1"
                              BackgroundColor="{Binding Path= BorderColor,
                              Source={x:Reference expanderTransistorOutput}}"
                              HeightRequest="2"
-                             HorizontalOptions="Fill" />
-                    <Label Grid.Row="2"
-                           Text="{Binding Path=TransistorOutput.Descricao,
-                           Source={x:Reference expanderTransistorOutput}}"
-                           VerticalTextAlignment="Start"
-                           VerticalOptions="Fill"
-                           HorizontalOptions="Fill" />
-                   
+                             HorizontalOptions="Fill"/>
+                    <StackLayout Grid.Row="2">
+                        <Grid ColumnSpacing="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Margin="0,8,0,0"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Slider Pwm"
+                                   FontAttributes="Italic"/>
+                            <Slider x:Name="Slider_porcPwm"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    MaximumTrackColor="Black">
+                            </Slider>
+                            <Label Margin="0, 8, 0, 0"
+                                   Grid.Row="0"
+                                   Grid.Column="3"
+                                   FontAttributes="Bold"
+                                   BindingContext="{x:Reference Name=Slider_porcPwm}"
+                                   Text="{Binding Path=Value}">
+                            </Label>
+                            <Label Margin="0,8,0,0"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="Slider Frequência"
+                                   FontAttributes="Italic"/>
+                            <Slider x:Name="Slider_frequencia"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    MaximumTrackColor="Black">
+                            </Slider>
+                            <Label Margin="0, 8, 0, 0"
+                                   Grid.Row="1"
+                                   Grid.Column="3"
+                                   FontAttributes="Bold"
+                                   BindingContext="{x:Reference Name=Slider_frequencia}"
+                                   Text="{Binding Path=Value}">
+                            </Label>
+                        </Grid>
+                    </StackLayout>
+                    
                 </Grid>
             </Frame>
         </StackLayout>
