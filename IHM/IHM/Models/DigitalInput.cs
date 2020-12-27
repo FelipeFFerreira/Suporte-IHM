@@ -18,6 +18,9 @@ namespace IHM.Models
             Status = status;
         }
 
+        public DigitalInput()
+        {
+        }
         public string Nome
         {
             get { return nome; }

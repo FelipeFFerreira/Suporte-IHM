@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IHM.Views.ViewDigitalInput"
+             x:Name="viewDigitalInput">
+    <ContentView.Content>
+        <StackLayout>
+            <Frame BackgroundColor="{Binding Path=CardColor,
+                   Source={x:Reference viewDigitalInput}}"
+                   BorderColor="{Binding BorderColor}"
+                   CornerRadius="5"
+                   HasShadow="True"
+                   Padding="8"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Margin="0,0,0,10"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span  
+                                              Text="Entrada Digital: "
+                                              TextColor="Black" 
+                                              FontSize="Body"
+                                              FontAttributes="Bold"/>
+                                            <Span Text="{Binding Path=DigitalInput.Nome,
+                                              Source={x:Reference viewDigitalInput}}"
+                                              TextColor="Black" 
+                                              FontSize="Caption"
+                                              FontAttributes="Bold"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="3"
+                                   Grid.Column="0"
+                                   Margin="0,0,0,10"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span  
+                                              Text="Status: "
+                                              TextColor="Black" 
+                                              FontSize="14"
+                                              FontAttributes="Bold"/>
+                                            <Span Text="{Binding Path=DigitalInput.Status,
+                                              Source={x:Reference viewDigitalInput}}"
+                                              TextColor="Black" 
+                                              FontSize="14"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Image Grid.Row="0"
+                                   Grid.RowSpan="3"
+                                   Grid.Column="2"
+                                  Source="transistor_icone.png">
+                            </Image>
+                        </Grid>
+                    </Grid>
+
+                    <BoxView Grid.Row="1"
+                             BackgroundColor="{Binding Path= BorderColor,
+                             Source={x:Reference viewDigitalInput}}"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill"/>
+                    <StackLayout Grid.Row="2">
+                        <Grid ColumnSpacing="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Margin="0,8,0,0"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Slider Pwm"
+                                   FontAttributes="Italic"/>
+                        </Grid>
+                    </StackLayout>
+
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
