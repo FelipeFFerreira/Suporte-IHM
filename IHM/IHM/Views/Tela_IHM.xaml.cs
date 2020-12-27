@@ -16,11 +16,11 @@ namespace IHM.Views
     public partial class Tela_IHM : ContentPage
     {
         SynchronizationContext synchronizationContext;
-        TransistorOutputViewModel modeloApresentacao;
+        IHMViewModel modeloApresentacao;
         public Tela_IHM()
         {
             synchronizationContext = SynchronizationContext.Current;
-            BindingContext = modeloApresentacao = new TransistorOutputViewModel();
+            BindingContext = modeloApresentacao = new IHMViewModel();
             InitializeComponent();
         }
 

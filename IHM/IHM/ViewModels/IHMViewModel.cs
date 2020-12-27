@@ -5,19 +5,18 @@ using System.Windows.Input;
 
 namespace IHM.ViewModels
 {
-    public class TransistorOutputViewModel
+    public class IHMViewModel
     {
-        public TransistorOutput TransistorOutput1 { get; } = new TransistorOutput("O.1", false, 150, 200, "Saidas de Potencia CMOS");
-        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O.2", true, 160, 210, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum.");
+        public TransistorOutput TransistorOutput1 { get; } = new TransistorOutput("O.1", false, 150, 200);
+        public TransistorOutput TransistorOutput2 { get; } = new TransistorOutput("O.2", false, 160, 210);
 
         public ObservableCollection<TransistorOutput> TransistorOutputs { get; set; }
-        public ObservableCollection<TransistorOutput> TransistorOutputs_ { get; set; } = new ObservableCollection<TransistorOutput>();
+        public ObservableCollection<TransistorOutput> TransistorOutputsViewModel { get; set; } = new ObservableCollection<TransistorOutput>();
 
-        public ICommand PesquisaTransistorOutputCommand { get; private set; }
         public ObservableCollection<DigitalInput> DigitalInputs { get; set; }
 
         public ObservableCollection<object> Teste { get; set; }
-        public TransistorOutputViewModel()
+        public IHMViewModel()
         {
 
             TransistorOutputs = new ObservableCollection<TransistorOutput>
@@ -37,9 +36,9 @@ namespace IHM.ViewModels
         {
             if (item is TransistorOutput transistorOutput)
             {
-                if (TransistorOutputs_.Count > 0)
-                    TransistorOutputs_.Remove(TransistorOutputs_[0]);
-                TransistorOutputs_.Add(SearchTransistorOutput(transistorOutput));
+                if (TransistorOutputsViewModel.Count > 0)
+                    TransistorOutputsViewModel.Remove(TransistorOutputsViewModel[0]);
+                TransistorOutputsViewModel.Add(SearchTransistorOutput(transistorOutput));
             }
         }
         public void AtribuiComponenteSelecionado(object item)

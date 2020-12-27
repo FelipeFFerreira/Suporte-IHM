@@ -14,21 +14,18 @@ namespace IHM.Models
         private bool status;
 
         private string nome;
-        private string descricao { get; set; }
 
         public TransistorOutput(
             string nome,
             bool status,
             int porcPwm,
-            int frequencia,
-            string description
+            int frequencia
             )
         {
             Nome = nome;
             PorcPwm = porcPwm;
             Frequencia = frequencia;
             Status = status;
-            descricao = description;
         }
 
         public TransistorOutput()
@@ -89,20 +86,7 @@ namespace IHM.Models
             }
         }
 
-        public string Descricao
-        {
-            get { return descricao; }
-
-            set
-            {
-                if (descricao != value)
-                {
-                    descricao = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Status)));
-                }
-            }
-        }
-
+       
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

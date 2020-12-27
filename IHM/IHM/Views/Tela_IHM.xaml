@@ -13,16 +13,14 @@
     </ContentPage.BindingContext>-->
 
     <ContentPage.Resources>
-        <DataTemplate x:Key="SaidaTransistorTemplate">
+        <DataTemplate x:Key="TransistorOutputTemplate">
             <apresentacao:ExpanderTransistorOutput TransistorOutput="{Binding Path=.}"/>
         </DataTemplate>
         <DataTemplate x:Key="Nenhum">
             <Label Text="nenhum"/>
         </DataTemplate>
 
-        <views:OpcaoEscolhaTemplateSelector x:Key="OpcaoEscolhaTemplateSelector"
-                                                       ExpanderTransistorOutput="{StaticResource SaidaTransistorTemplate}"
-                                                       Nenhum="{StaticResource Nenhum}"/>
+        
 
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -52,8 +50,8 @@
                       Grid.Column="5"
                       BackgroundColor="#91COBB">
                 <StackLayout Margin="10"
-                 BindableLayout.ItemsSource="{Binding TransistorOutputs_}"
-                 BindableLayout.ItemTemplate="{StaticResource SaidaTransistorTemplate}" />
+                 BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
+                 BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}" />
 
             </Grid>
                 <!--Estrutura Entradas Digitais-->
