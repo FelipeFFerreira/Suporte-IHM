@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using IHM.Models;
 
 using Xamarin.Forms;
@@ -12,57 +7,57 @@ using Xamarin.Forms.Xaml;
 namespace IHM.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExpanderTransistorOutput : ContentView
+    public partial class ViewTransistorOutput : ContentView
     {
         public static readonly BindableProperty TransistorOutputProperty =
             BindableProperty.Create(
                 nameof(TransistorOutput),
                 typeof(TransistorOutput),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 new TransistorOutput());
 
         public static readonly BindableProperty CardTitleProperty =
             BindableProperty.Create(
                 nameof(CardTitle),
                 typeof(string),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 string.Empty);
 
         public static readonly BindableProperty CardDescriptionProperty = 
             BindableProperty.Create(
                 nameof(CardDescription),
                 typeof(string),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 string.Empty);
 
         public static readonly BindableProperty BorderColorProperty =
             BindableProperty.Create(
                 nameof(BorderColor),
                 typeof(Color),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 Color.DarkGray);
 
         public static readonly BindableProperty CardColorProperty = 
             BindableProperty.Create(
                 nameof(CardColor),
                 typeof(Color),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 Color.White);
 
         public static readonly BindableProperty IconImageSourceProperty =
             BindableProperty.Create(
                 nameof(IconImageSource),
                 typeof(ImageSource),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 default(ImageSource));
 
         public static readonly BindableProperty IconBackgroundColorProperty =
             BindableProperty.Create(
                 nameof(IconBackgroundColor),
                 typeof(Color),
-                typeof(ExpanderTransistorOutput),
+                typeof(ViewTransistorOutput),
                 Color.LightGray);
-        public ExpanderTransistorOutput()
+        public ViewTransistorOutput()
         {
             InitializeComponent();
         }

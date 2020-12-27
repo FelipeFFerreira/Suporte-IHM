@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IHM.Views.ExpanderTransistorOutput"
-             x:Name="expanderTransistorOutput">
+             x:Class="IHM.Views.ViewTransistorOutput"
+             x:Name="viewTransistorOutput">
   <ContentView.Content>
       <StackLayout>
             <Frame BackgroundColor="{Binding Path=CardColor,
-                   Source={x:Reference expanderTransistorOutput}}"
+                   Source={x:Reference viewTransistorOutput}}"
                    BorderColor="{Binding BorderColor}"
                    CornerRadius="5"
                    HasShadow="True"
@@ -43,7 +43,7 @@
                                               FontSize="Body"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Nome,
-                                              Source={x:Reference expanderTransistorOutput}}"
+                                              Source={x:Reference viewTransistorOutput}}"
                                               TextColor="Black" 
                                               FontSize="Caption"
                                               FontAttributes="Bold"/>
@@ -65,7 +65,7 @@
                                               FontSize="14"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.PorcPwm,
-                                              Source={x:Reference expanderTransistorOutput}}"
+                                              Source={x:Reference viewTransistorOutput}}"
                                               TextColor="Black" 
                                               FontSize="14"
                                               FontAttributes="None"/>
@@ -87,7 +87,7 @@
                                               FontSize="14"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Frequencia,
-                                              Source={x:Reference expanderTransistorOutput}}"
+                                              Source={x:Reference viewTransistorOutput}}"
                                               TextColor="Black" 
                                               FontSize="14"/>
                                         </FormattedString.Spans>
@@ -108,7 +108,7 @@
                                               FontSize="14"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Status,
-                                              Source={x:Reference expanderTransistorOutput}}"
+                                              Source={x:Reference viewTransistorOutput}}"
                                               TextColor="Black" 
                                               FontSize="14"/>
                                         </FormattedString.Spans>
@@ -125,7 +125,7 @@
                      
                     <BoxView Grid.Row="1"
                              BackgroundColor="{Binding Path= BorderColor,
-                             Source={x:Reference expanderTransistorOutput}}"
+                             Source={x:Reference viewTransistorOutput}}"
                              HeightRequest="2"
                              HorizontalOptions="Fill"/>
                     <StackLayout Grid.Row="2">
