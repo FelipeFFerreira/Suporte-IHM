@@ -23,16 +23,16 @@ namespace IHM.ViewModels
         public DigitalInput DigitalInput6 { get; } = new DigitalInput("I6", false);
         public DigitalInput DigitalInput7 { get; } = new DigitalInput("I7", false);
         public DigitalInput DigitalInput8 { get; } = new DigitalInput("I8", false);
-        public AnalogicalInput AnalogicaInput1 { get; } = new AnalogicalInput("A1", false, 100);
-        public AnalogicalInput AnalogicaInput2 { get; } = new AnalogicalInput("A2", false, 0);
-        public AnalogicalInput AnalogicaInput3 { get; } = new AnalogicalInput("A3", false, 0);
-        public AnalogicalInput AnalogicaInput4 { get; } = new AnalogicalInput("A4", false, 0);
+        public AnalogicaInput AnalogicaInput1 { get; } = new AnalogicaInput("A1", false, 100);
+        public AnalogicaInput AnalogicaInput2 { get; } = new AnalogicaInput("A2", false, 0);
+        public AnalogicaInput AnalogicaInput3 { get; } = new AnalogicaInput("A3", false, 0);
+        public AnalogicaInput AnalogicaInput4 { get; } = new AnalogicaInput("A4", false, 0);
         public ObservableCollection<DigitalInput> DigitalInputsViewModel { get; set; } = new ObservableCollection<DigitalInput>();
         public ObservableCollection<TransistorOutput> TransistorOutputsViewModel { get; set; } = new ObservableCollection<TransistorOutput>();
-        public ObservableCollection<AnalogicalInput> AnalogicaInputsViewModel { get; set; }
+        public ObservableCollection<AnalogicaInput> AnalogicaInputsViewModel { get; set; } = new ObservableCollection<AnalogicaInput>();
         public ObservableCollection<DigitalInput> DigitalInputs { get; set; }
         public ObservableCollection<TransistorOutput> TransistorOutputs { get; set; }
-        public ObservableCollection<AnalogicalInput> AnalogicaInputs { get; set; }
+        public ObservableCollection<AnalogicaInput> AnalogicaInputs { get; set; }
 
         public IHMViewModel()
         {
@@ -61,7 +61,7 @@ namespace IHM.ViewModels
                 DigitalInput8,
             };
 
-            AnalogicaInputs = new ObservableCollection<AnalogicalInput>
+            AnalogicaInputs = new ObservableCollection<AnalogicaInput>
             {
                 AnalogicaInput1,
                 AnalogicaInput2,
@@ -84,7 +84,7 @@ namespace IHM.ViewModels
                     DigitalInputsViewModel.Remove(DigitalInputsViewModel[0]);
                 DigitalInputsViewModel.Add(SearchDigitalInput(digitalInput));
             }
-            else if (item is AnalogicalInput analogicaInput)
+            else if (item is AnalogicaInput analogicaInput)
             {
                 if (AnalogicaInputsViewModel.Count > 0)
                     AnalogicaInputsViewModel.Remove(AnalogicaInputsViewModel[0]);
@@ -118,7 +118,7 @@ namespace IHM.ViewModels
             return null;
         }
 
-        public AnalogicalInput SearchAnalogicaInput(AnalogicalInput analogica)
+        public AnalogicaInput SearchAnalogicaInput(AnalogicaInput analogica)
         {
 
             foreach (var item in AnalogicaInputs)

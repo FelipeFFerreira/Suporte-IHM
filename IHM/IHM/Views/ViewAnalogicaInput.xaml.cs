@@ -1,5 +1,9 @@
-﻿
-using IHM.Models;
+﻿using IHM.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,66 +11,66 @@ using Xamarin.Forms.Xaml;
 namespace IHM.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ViewTransistorOutput : ContentView
+    public partial class ViewAnalogicaInput : ContentView
     {
-        public static readonly BindableProperty TransistorOutputProperty =
-            BindableProperty.Create(
-                nameof(TransistorOutput),
-                typeof(TransistorOutput),
-                typeof(ViewTransistorOutput),
-                new TransistorOutput());
+        public static readonly BindableProperty AnalogicaInputProperty =
+           BindableProperty.Create(
+               nameof(AnalogicaInput),
+               typeof(AnalogicaInput),
+               typeof(ViewAnalogicaInput),
+               new AnalogicaInput());
 
         public static readonly BindableProperty CardTitleProperty =
             BindableProperty.Create(
                 nameof(CardTitle),
                 typeof(string),
-                typeof(ViewTransistorOutput),
+                typeof(ViewAnalogicaInput),
                 string.Empty);
 
-        public static readonly BindableProperty CardDescriptionProperty = 
+        public static readonly BindableProperty CardDescriptionProperty =
             BindableProperty.Create(
                 nameof(CardDescription),
                 typeof(string),
-                typeof(ViewTransistorOutput),
+                typeof(ViewAnalogicaInput),
                 string.Empty);
 
         public static readonly BindableProperty BorderColorProperty =
             BindableProperty.Create(
                 nameof(BorderColor),
                 typeof(Color),
-                typeof(ViewTransistorOutput),
+                typeof(ViewAnalogicaInput),
                 Color.DarkGray);
 
         public static readonly BindableProperty CardColorProperty =
             BindableProperty.Create(
                 nameof(CardColor),
                 typeof(Color),
-                typeof(ViewTransistorOutput),
-                Color.Blue);
+                typeof(ViewAnalogicaInput),
+                Color.AliceBlue
+                );
 
         public static readonly BindableProperty IconImageSourceProperty =
             BindableProperty.Create(
                 nameof(IconImageSource),
                 typeof(ImageSource),
-                typeof(ViewTransistorOutput),
+                typeof(ViewAnalogicaInput),
                 default(ImageSource));
 
         public static readonly BindableProperty IconBackgroundColorProperty =
             BindableProperty.Create(
                 nameof(IconBackgroundColor),
                 typeof(Color),
-                typeof(ViewTransistorOutput),
+                typeof(ViewAnalogicaInput),
                 Color.LightGray);
-        public ViewTransistorOutput()
+        public ViewAnalogicaInput()
         {
             InitializeComponent();
         }
 
-        ColorTypeConverter color = new ColorTypeConverter();
-        public object TransistorOutput
+        public object AnalogicaInput
         {
-            get { return (TransistorOutput)GetValue(TransistorOutputProperty); }
-            set { SetValue(TransistorOutputProperty, value); }
+            get { return (AnalogicaInput)GetValue(AnalogicaInputProperty); }
+            set { SetValue(AnalogicaInputProperty, value); }
         }
 
         public string CardTitle
@@ -104,5 +108,6 @@ namespace IHM.Views
             get => (Color)GetValue(IconBackgroundColorProperty);
             set => SetValue(IconBackgroundColorProperty, value);
         }
+
     }
 }

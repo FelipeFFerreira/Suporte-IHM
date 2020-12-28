@@ -5,13 +5,13 @@ using System.Text;
 
 namespace IHM.Models
 {
-    public class AnalogicalInput : INotifyPropertyChanged
+    public class AnalogicaInput : INotifyPropertyChanged
     {
         private string nome;
         private bool status;
         private float value;
 
-        public AnalogicalInput(
+        public AnalogicaInput(
             string nome,
             bool status,
             float value)
@@ -21,6 +21,9 @@ namespace IHM.Models
             Value = value;
         }
 
+        public AnalogicaInput()
+        {
+        }
         public string Nome
         {
             get { return nome; }

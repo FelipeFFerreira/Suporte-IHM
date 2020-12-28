@@ -41,7 +41,7 @@ namespace IHM.Views
                 nameof(CardColor),
                 typeof(Color),
                 typeof(ViewDigitalInput),
-                Color.White);
+                Color.AliceBlue);
 
         public static readonly BindableProperty IconImageSourceProperty =
             BindableProperty.Create(

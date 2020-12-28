@@ -16,7 +16,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
-                        <RowDefinition Height="5" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid>
@@ -51,7 +51,7 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Label Grid.Row="3"
+                            <Label Grid.Row="1"
                                    Grid.Column="0"
                                    Margin="0,0,0,10"
                                    VerticalOptions="StartAndExpand"
@@ -97,11 +97,6 @@
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Label Margin="0,8,0,0"
-                                   Grid.Row="0"
-                                   Grid.Column="0"
-                                   Text="Slider Pwm"
-                                   FontAttributes="Italic"/>
                         </Grid>
                     </StackLayout>
 

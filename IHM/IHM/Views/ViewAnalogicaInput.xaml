@@ -1,13 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IHM.Views.ViewTransistorOutput"
-             x:Name="viewTransistorOutput"
-             BackgroundColor="#91COBB">
-  <ContentView.Content>
-      <StackLayout>
+             x:Class="IHM.Views.ViewAnalogicaInput"
+             x:Name="viewAnalogicaInput">
+    <ContentView.Content>
+        <StackLayout>
             <Frame BackgroundColor="{Binding Path=CardColor,
-                   Source={x:Reference viewTransistorOutput}}"
+                   Source={x:Reference viewAnalogicaInput}}"
                    BorderColor="{Binding BorderColor}"
                    CornerRadius="5"
                    HasShadow="True"
@@ -16,18 +15,17 @@
                    VerticalOptions="Center">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="5" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="0"
@@ -39,12 +37,12 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span  
-                                              Text="Transitor Saida: "
+                                              Text="Entrada Analogica: "
                                               TextColor="Black" 
                                               FontSize="Body"
                                               FontAttributes="Bold"/>
-                                            <Span Text="{Binding Path=TransistorOutput.Nome,
-                                              Source={x:Reference viewTransistorOutput}}"
+                                            <Span Text="{Binding Path=AnalogicaInput.Nome,
+                                              Source={x:Reference viewAnalogicaInput}}"
                                               TextColor="Black" 
                                               FontSize="Caption"
                                               FontAttributes="Bold"/>
@@ -61,12 +59,12 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span  
-                                              Text="Porc Pwm: "
+                                              Text="Value: "
                                               TextColor="Black" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
-                                            <Span Text="{Binding Path=TransistorOutput.PorcPwm,
-                                              Source={x:Reference viewTransistorOutput}}"
+                                            <Span Text="{Binding Path=AnalogicaInput.Value,
+                                              Source={x:Reference viewAnalogicaInput}}"
                                               TextColor="Black" 
                                               FontSize="14"
                                               FontAttributes="None"/>
@@ -83,33 +81,12 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span  
-                                              Text="Frequencia: "
-                                              TextColor="Black" 
-                                              FontSize="14"
-                                              FontAttributes="Bold"/>
-                                            <Span Text="{Binding Path=TransistorOutput.Frequencia,
-                                              Source={x:Reference viewTransistorOutput}}"
-                                              TextColor="Black" 
-                                              FontSize="14"/>
-                                        </FormattedString.Spans>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <Label Grid.Row="3"
-                                   Grid.Column="0"
-                                   Margin="0,0,0,10"
-                                   VerticalOptions="StartAndExpand"
-                                   HorizontalOptions="StartAndExpand">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <FormattedString.Spans>
-                                            <Span  
                                               Text="Status: "
                                               TextColor="Black" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
-                                            <Span Text="{Binding Path=TransistorOutput.Status,
-                                              Source={x:Reference viewTransistorOutput}}"
+                                            <Span Text="{Binding Path=AnalogicaInput.Status,
+                                              Source={x:Reference viewAnalogicaInput}}"
                                               TextColor="Black" 
                                               FontSize="14"/>
                                         </FormattedString.Spans>
@@ -117,16 +94,16 @@
                                 </Label.FormattedText>
                             </Label>
                             <Image Grid.Row="0"
-                                   Grid.RowSpan="3"
+                                   Grid.RowSpan="2"
                                    Grid.Column="2"
                                   Source="transistor_icone.png">
                             </Image>
                         </Grid>
                     </Grid>
-                     
+
                     <BoxView Grid.Row="1"
                              BackgroundColor="{Binding Path= BorderColor,
-                             Source={x:Reference viewTransistorOutput}}"
+                             Source={x:Reference viewAnalogicaInput}}"
                              HeightRequest="2"
                              HorizontalOptions="Fill"/>
                     <StackLayout Grid.Row="2">
@@ -151,35 +128,12 @@
                                     Grid.Column="1"
                                     MaximumTrackColor="Black">
                             </Slider>
-                            <Label Margin="0, 8, 0, 0"
-                                   Grid.Row="0"
-                                   Grid.Column="3"
-                                   FontAttributes="Bold"
-                                   BindingContext="{x:Reference Name=Slider_porcPwm}"
-                                   Text="{Binding Path=Value}">
-                            </Label>
-                            <Label Margin="0,8,0,0"
-                                   Grid.Row="1"
-                                   Grid.Column="0"
-                                   Text="Slider Frequência"
-                                   FontAttributes="Italic"/>
-                            <Slider x:Name="Slider_frequencia"
-                                    Grid.Row="1"
-                                    Grid.Column="1"
-                                    MaximumTrackColor="Black">
-                            </Slider>
-                            <Label Margin="0, 8, 0, 0"
-                                   Grid.Row="1"
-                                   Grid.Column="3"
-                                   FontAttributes="Bold"
-                                   BindingContext="{x:Reference Name=Slider_frequencia}"
-                                   Text="{Binding Path=Value}">
-                            </Label>
+                            
                         </Grid>
                     </StackLayout>
-                    
+
                 </Grid>
             </Frame>
         </StackLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

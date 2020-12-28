@@ -42,12 +42,12 @@ namespace IHM.ModelApresentacao
 
       
 
-        public AnalogicalInput AnalogicaInput1 { get; } = new AnalogicalInput("A1", false, 100);
-        public AnalogicalInput AnalogicaInput2 { get; } = new AnalogicalInput("A2", false, 0);
-        public AnalogicalInput AnalogicaInput3 { get; } = new AnalogicalInput("A3", false, 0);
-        public AnalogicalInput AnalogicaInput4 { get; } = new AnalogicalInput("A4", false, 0);
+        public AnalogicaInput AnalogicaInput1 { get; } = new AnalogicaInput("A1", false, 100);
+        public AnalogicaInput AnalogicaInput2 { get; } = new AnalogicaInput("A2", false, 0);
+        public AnalogicaInput AnalogicaInput3 { get; } = new AnalogicaInput("A3", false, 0);
+        public AnalogicaInput AnalogicaInput4 { get; } = new AnalogicaInput("A4", false, 0);
 
-        private List<AnalogicalInput> ListAnalogicalInputs = new List<AnalogicalInput>();
+        private List<AnalogicaInput> ListAnalogicalInputs = new List<AnalogicaInput>();
         private List<DigitalInput> ListDigitalInputs = new List<DigitalInput>();
         private List<TransistorOutput> ListTransistorOutputs = new List<TransistorOutput>();
 
@@ -65,7 +65,7 @@ namespace IHM.ModelApresentacao
                 DigitalInput8,
             };
 
-            ListAnalogicalInputs = new List<AnalogicalInput>()
+            ListAnalogicalInputs = new List<AnalogicaInput>()
             {
                 AnalogicaInput1,
                 AnalogicaInput2,
@@ -80,7 +80,7 @@ namespace IHM.ModelApresentacao
                 item.PropertyChanged += DigitalInput_PropertyChanged;
             }
 
-            foreach (AnalogicalInput item in ListAnalogicalInputs)
+            foreach (AnalogicaInput item in ListAnalogicalInputs)
             {
                 item.PropertyChanged += DigitalInput_PropertyChanged;
             }
