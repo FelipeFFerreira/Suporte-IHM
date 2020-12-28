@@ -42,7 +42,7 @@ namespace IHM.Views
                 nameof(CardColor),
                 typeof(Color),
                 typeof(ViewTransistorOutput),
-                Color.Blue);
+                Color.FromHex("00416B"));
 
         public static readonly BindableProperty IconImageSourceProperty =
             BindableProperty.Create(

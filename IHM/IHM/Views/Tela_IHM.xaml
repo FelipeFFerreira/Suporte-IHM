@@ -16,40 +16,65 @@
             <DataTemplate x:Key="AnalogicaInputTemplate">
                 <apresentacao:ViewAnalogicaInput AnalogicaInput="{Binding Path=.}"/>
             </DataTemplate>
-            <DataTemplate x:Key="Nenhum">
-                <Label Text="nenhum"/>
-            </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
+            <StackLayout
+                Grid.Column="1"
+                Grid.Row="0">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Received: "
+                                      FontAttributes="Bold"
+                                      FontSize="Body"
+                                      TextColor="CadetBlue"/>
+                                <Span Text="{Binding Path=Received}"
+                                      FontAttributes="Bold"
+                                      FontSize="Body"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ScrollView>
 
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <StackLayout
-                    Grid.Row="0"
-                    BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
-                    BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}">
-                </StackLayout>
-                <StackLayout Grid.Row="1"
-                    BindableLayout.ItemsSource="{Binding DigitalInputsViewModel}"
-                    BindableLayout.ItemTemplate="{StaticResource DigitalInputTemplate}">
-                </StackLayout>
-                <StackLayout Grid.Row="2"               
-                    BindableLayout.ItemsSource="{Binding AnalogicaInputsViewModel}"
-                    BindableLayout.ItemTemplate="{StaticResource AnalogicaInputTemplate}">
-                </StackLayout>
-            </Grid>
-
+                    <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
+                        BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}">
+                    </StackLayout>
+                    <StackLayout 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BindableLayout.ItemsSource="{Binding DigitalInputsViewModel}"
+                        BindableLayout.ItemTemplate="{StaticResource DigitalInputTemplate}">
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        BindableLayout.ItemsSource="{Binding AnalogicaInputsViewModel}"
+                        BindableLayout.ItemTemplate="{StaticResource AnalogicaInputTemplate}">
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+            </StackLayout>
 
             <Grid 
                 Grid.Column="0"
@@ -57,11 +82,12 @@
                 ColumnSpacing="4"
                 BackgroundColor="White">
                 <Grid.RowDefinitions>
-                    <RowDefinition />
+                    <RowDefinition Height="1"/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition Height="1"/>
                     <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="1"/>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
@@ -72,7 +98,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                
-                <!--Estrutura Entradas Digitais-->
+                <!--Estrutura Entradas Digitais--><!--
                 <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
                     <Frame BackgroundColor="AliceBlue"/>
                     <Label VerticalOptions="CenterAndExpand"
@@ -82,7 +108,7 @@
                        FontSize="Default"
                        Text="Entradas Digitais">
                     </Label>
-                </Grid>
+                </Grid>-->
                 <Grid Grid.Row="1"
                   Grid.Column="0"
                   BindingContext="{Binding Path=DigitalInput1}">
@@ -260,7 +286,7 @@
                     </Label>
                 </Grid>
                 <!--Entradas Analogicas-->
-                <Grid Grid.Row="3"
+                <!--<Grid Grid.Row="3"
                   Grid.Column="0"
                   Grid.ColumnSpan="4">
                     <Frame BackgroundColor="AliceBlue"/>
@@ -271,7 +297,7 @@
                        FontSize="Default"
                        Text="Entradas Analogicas">
                     </Label>
-                </Grid>
+                </Grid>-->
                 <Grid Grid.Row="4"
                   Grid.Column="0"
                   BindingContext="{Binding AnalogicaInput1}">
@@ -364,8 +390,9 @@
                         </Label.GestureRecognizers>
                     </Label>
                 </Grid>
+                
                 <!--Saindas de potencia-->
-                <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4">
+                <!--<Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4">
                     <Frame BackgroundColor="AliceBlue"/>
                     <Label VerticalOptions="CenterAndExpand"
                        HorizontalOptions="CenterAndExpand"
@@ -374,7 +401,7 @@
                        FontSize="Default"
                        Text="Saidas de Potencia">
                     </Label>
-                </Grid>
+                </Grid>-->
                 <Grid Grid.Row="6"
                   Grid.Column="0"
                   BindingContext="{Binding Path=TransistorOutput1}">

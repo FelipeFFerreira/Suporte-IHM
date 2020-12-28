@@ -34,9 +34,11 @@ namespace IHM.ViewModels
         public ObservableCollection<TransistorOutput> TransistorOutputs { get; set; }
         public ObservableCollection<AnalogicaInput> AnalogicaInputs { get; set; }
 
+        public string Received { get; } = "Aguardando mensagens do Dispositivo";
+
         public IHMViewModel()
         {
-
+            TransistorOutputsViewModel.Add(TransistorOutput1);
             TransistorOutputs = new ObservableCollection<TransistorOutput>
             {
                 TransistorOutput1,
@@ -49,6 +51,7 @@ namespace IHM.ViewModels
                 TransistorOutput8,
             };
 
+            DigitalInputsViewModel.Add(DigitalInput1);
             DigitalInputs = new ObservableCollection<DigitalInput>
             {
                 DigitalInput1,
@@ -61,6 +64,7 @@ namespace IHM.ViewModels
                 DigitalInput8,
             };
 
+            AnalogicaInputsViewModel.Add(AnalogicaInput1);
             AnalogicaInputs = new ObservableCollection<AnalogicaInput>
             {
                 AnalogicaInput1,

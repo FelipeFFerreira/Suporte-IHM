@@ -9,5 +9,14 @@
         <ResourceDictionary>
             <Color x:Key="corDigitalInput">Gray</Color>
         </ResourceDictionary>
+        <ResourceDictionary>
+            <Color x:Key="corLabelTransistorOutput">White</Color>
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <Color x:Key="corLabelInputDigital">White</Color>
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <Color x:Key="corLabelAnalogicaInput">White</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

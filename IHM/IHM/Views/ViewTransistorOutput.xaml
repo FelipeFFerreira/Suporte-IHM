@@ -27,7 +27,7 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="0"
@@ -40,12 +40,12 @@
                                         <FormattedString.Spans>
                                             <Span  
                                               Text="Transitor Saida: "
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="Body"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Nome,
                                               Source={x:Reference viewTransistorOutput}}"
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="Caption"
                                               FontAttributes="Bold"/>
                                         </FormattedString.Spans>
@@ -62,12 +62,12 @@
                                         <FormattedString.Spans>
                                             <Span  
                                               Text="Porc Pwm: "
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.PorcPwm,
                                               Source={x:Reference viewTransistorOutput}}"
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="14"
                                               FontAttributes="None"/>
                                         </FormattedString.Spans>
@@ -84,12 +84,12 @@
                                         <FormattedString.Spans>
                                             <Span  
                                               Text="Frequencia: "
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Frequencia,
                                               Source={x:Reference viewTransistorOutput}}"
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="14"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -105,12 +105,12 @@
                                         <FormattedString.Spans>
                                             <Span  
                                               Text="Status: "
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
                                             <Span Text="{Binding Path=TransistorOutput.Status,
                                               Source={x:Reference viewTransistorOutput}}"
-                                              TextColor="Black" 
+                                              TextColor="{StaticResource corLabelTransistorOutput}" 
                                               FontSize="14"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -141,11 +141,12 @@
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Label Margin="0,8,0,0"
+                            <Label Margin="0, 8, 0, 0"
                                    Grid.Row="0"
                                    Grid.Column="0"
                                    Text="Slider Pwm"
-                                   FontAttributes="Italic"/>
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource corLabelTransistorOutput}"/>
                             <Slider x:Name="Slider_porcPwm"
                                     Grid.Row="0"
                                     Grid.Column="1"
@@ -156,13 +157,15 @@
                                    Grid.Column="3"
                                    FontAttributes="Bold"
                                    BindingContext="{x:Reference Name=Slider_porcPwm}"
-                                   Text="{Binding Path=Value}">
+                                   Text="{Binding Path=Value}"
+                                   TextColor="{StaticResource corLabelTransistorOutput}">
                             </Label>
                             <Label Margin="0,8,0,0"
                                    Grid.Row="1"
                                    Grid.Column="0"
                                    Text="Slider Frequência"
-                                   FontAttributes="Italic"/>
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource corLabelTransistorOutput}"/>
                             <Slider x:Name="Slider_frequencia"
                                     Grid.Row="1"
                                     Grid.Column="1"
@@ -173,7 +176,8 @@
                                    Grid.Column="3"
                                    FontAttributes="Bold"
                                    BindingContext="{x:Reference Name=Slider_frequencia}"
-                                   Text="{Binding Path=Value}">
+                                   Text="{Binding Path=Value}"
+                                   TextColor="{StaticResource corLabelTransistorOutput}">
                             </Label>
                         </Grid>
                     </StackLayout>
