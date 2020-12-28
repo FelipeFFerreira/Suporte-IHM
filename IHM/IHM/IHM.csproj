@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Compile Remove="ViewModels\ModelApresentacaoDadosPage.cs" />
+    <Compile Remove="ViewModels\ModeloApresentacaoIHM.cs" />
   </ItemGroup>
 
   <ItemGroup>

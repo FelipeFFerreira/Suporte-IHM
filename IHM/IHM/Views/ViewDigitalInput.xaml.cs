@@ -34,7 +34,7 @@ namespace IHM.Views
                 nameof(BorderColor),
                 typeof(Color),
                 typeof(ViewDigitalInput),
-                Color.DarkGray);
+                Color.White);
 
         public static readonly BindableProperty CardColorProperty =
             BindableProperty.Create(

@@ -39,14 +39,14 @@ namespace IHM.Views
                 nameof(BorderColor),
                 typeof(Color),
                 typeof(ViewAnalogicaInput),
-                Color.DarkGray);
+                Color.White);
 
         public static readonly BindableProperty CardColorProperty =
             BindableProperty.Create(
                 nameof(CardColor),
                 typeof(Color),
                 typeof(ViewAnalogicaInput),
-                Color.Red
+                Color.FromHex("FF008080")
                 );
 
         public static readonly BindableProperty IconImageSourceProperty =

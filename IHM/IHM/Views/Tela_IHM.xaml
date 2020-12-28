@@ -21,8 +21,8 @@
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <StackLayout
@@ -57,20 +57,21 @@
                     <StackLayout 
                         Grid.Row="0"
                         Grid.Column="0"
-                        BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
-                        BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}">
+                        BindableLayout.ItemsSource="{Binding DigitalInputsViewModel}"
+                        BindableLayout.ItemTemplate="{StaticResource DigitalInputTemplate}">
                     </StackLayout>
                     <StackLayout 
                         Grid.Row="1"
                         Grid.Column="0"
-                        BindableLayout.ItemsSource="{Binding DigitalInputsViewModel}"
-                        BindableLayout.ItemTemplate="{StaticResource DigitalInputTemplate}">
+                        BindableLayout.ItemsSource="{Binding AnalogicaInputsViewModel}"
+                        BindableLayout.ItemTemplate="{StaticResource AnalogicaInputTemplate}">
+         
                     </StackLayout>
                     <StackLayout
                         Grid.Row="2"
                         Grid.Column="0"
-                        BindableLayout.ItemsSource="{Binding AnalogicaInputsViewModel}"
-                        BindableLayout.ItemTemplate="{StaticResource AnalogicaInputTemplate}">
+                         BindableLayout.ItemsSource="{Binding TransistorOutputsViewModel}"
+                        BindableLayout.ItemTemplate="{StaticResource TransistorOutputTemplate}">
                     </StackLayout>
                 </Grid>
             </ScrollView>
@@ -301,8 +302,9 @@
                 <Grid Grid.Row="4"
                   Grid.Column="0"
                   BindingContext="{Binding AnalogicaInput1}">
-                    <Frame CornerRadius="5"
-                       BackgroundColor="Red"
+                    <Frame 
+                       CornerRadius="5"
+                       BackgroundColor="#FF008080"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_1">
                         <Frame.GestureRecognizers>
@@ -325,7 +327,7 @@
                   Grid.Column="1"
                   BindingContext="{Binding AnalogicaInput2}">
                     <Frame CornerRadius="5"
-                       BackgroundColor="Red"
+                       BackgroundColor="#FF008080"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_2">
                         <Frame.GestureRecognizers>
@@ -348,7 +350,7 @@
                   Grid.Column="2"
                   BindingContext="{Binding AnalogicaInput3}">
                     <Frame CornerRadius="5"
-                       BackgroundColor="Red"
+                       BackgroundColor="#FF008080"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_3">
                         <Frame.GestureRecognizers>
@@ -371,7 +373,7 @@
                   Grid.Column="3"
                   BindingContext="{Binding AnalogicaInput4}">
                     <Frame CornerRadius="5"
-                       BackgroundColor="Red"
+                       BackgroundColor="#FF008080"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_4">
                         <Frame.GestureRecognizers>

@@ -59,11 +59,11 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span  
-                                              Text="Porc Pwm: "
+                                              Text="Value: "
                                               TextColor="{StaticResource corLabelAnalogicaInput}" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
-                                            <Span Text="{Binding Path=AnalogicaInput.PorcPwm,
+                                            <Span Text="{Binding Path=AnalogicaInput.Value,
                                               Source={x:Reference viewAnalogicaInput}}"
                                               TextColor="{StaticResource corLabelAnalogicaInput}" 
                                               FontSize="14"
@@ -81,28 +81,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span  
-                                              Text="Frequencia: "
-                                              TextColor="{StaticResource corLabelAnalogicaInput}" 
-                                              FontSize="14"
-                                              FontAttributes="Bold"/>
-                                            <Span Text="{Binding Path=AnalogicaInput.Frequencia,
-                                              Source={x:Reference viewAnalogicaInput}}"
-                                              TextColor="{StaticResource corLabelAnalogicaInput}" 
-                                              FontSize="14"/>
-                                        </FormattedString.Spans>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <Label Grid.Row="3"
-                                   Grid.Column="0"
-                                   Margin="0,0,0,10"
-                                   VerticalOptions="StartAndExpand"
-                                   HorizontalOptions="StartAndExpand">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <FormattedString.Spans>
-                                            <Span  
-                                              Text="Status: "
+                                              Text="Staus: "
                                               TextColor="{StaticResource corLabelAnalogicaInput}" 
                                               FontSize="14"
                                               FontAttributes="Bold"/>
@@ -131,7 +110,6 @@
                         <Grid ColumnSpacing="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
-                                <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -142,10 +120,10 @@
                             <Label Margin="0, 8, 0, 0"
                                    Grid.Row="0"
                                    Grid.Column="0"
-                                   Text="Slider Pwm"
+                                   Text="Slider Value"
                                    FontAttributes="Bold"
                                    TextColor="{StaticResource corLabelAnalogicaInput}"/>
-                            <Slider x:Name="Slider_porcPwm"
+                            <Slider x:Name="Slider_Value"
                                     Grid.Row="0"
                                     Grid.Column="1"
                                     MaximumTrackColor="Black">
@@ -154,11 +132,11 @@
                                    Grid.Row="0"
                                    Grid.Column="3"
                                    FontAttributes="Bold"
-                                   BindingContext="{x:Reference Name=Slider_porcPwm}"
+                                   BindingContext="{x:Reference Name=Slider_Value}"
                                    Text="{Binding Path=Value}"
-                                   TextColor="{StaticResource corLabelAnalogicaInput}">
+                                   TextColor="{StaticResource corLabelTransistorOutput}">
                             </Label>
-                            
+
                         </Grid>
                     </StackLayout>
 
