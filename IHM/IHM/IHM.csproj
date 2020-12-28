@@ -27,13 +27,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ViewTelaIHM.xaml.cs">
+      <DependentUpon>ViewTelaIHM.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ViewTransistorOutput.xaml.cs">
       <DependentUpon>ViewTransistorOutput.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\Tela_IHM.xaml">
+    <EmbeddedResource Update="Views\ViewTelaIHM.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ViewAnalogicaInput.xaml">

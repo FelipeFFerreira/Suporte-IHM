@@ -28,17 +28,18 @@
             <StackLayout
                 Grid.Column="1"
                 Grid.Row="0">
-                <Label>
+                <Label BackgroundColor="#FFCD5C5C">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Received: "
                                       FontAttributes="Bold"
                                       FontSize="Body"
-                                      TextColor="CadetBlue"/>
+                                      TextColor="Yellow"/>
                                 <Span Text="{Binding Path=Received}"
                                       FontAttributes="Bold"
-                                      FontSize="Body"/>
+                                      FontSize="Body"
+                                      TextColor="White"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -304,7 +305,7 @@
                   BindingContext="{Binding AnalogicaInput1}">
                     <Frame 
                        CornerRadius="5"
-                       BackgroundColor="#FF008080"
+                       BackgroundColor="{StaticResource corAnalogicaInput}"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_1">
                         <Frame.GestureRecognizers>
@@ -327,7 +328,7 @@
                   Grid.Column="1"
                   BindingContext="{Binding AnalogicaInput2}">
                     <Frame CornerRadius="5"
-                       BackgroundColor="#FF008080"
+                       BackgroundColor="{StaticResource corAnalogicaInput}"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_2">
                         <Frame.GestureRecognizers>
@@ -350,7 +351,7 @@
                   Grid.Column="2"
                   BindingContext="{Binding AnalogicaInput3}">
                     <Frame CornerRadius="5"
-                       BackgroundColor="#FF008080"
+                       BackgroundColor="{StaticResource corAnalogicaInput}"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_3">
                         <Frame.GestureRecognizers>
@@ -373,7 +374,7 @@
                   Grid.Column="3"
                   BindingContext="{Binding AnalogicaInput4}">
                     <Frame CornerRadius="5"
-                       BackgroundColor="#FF008080"
+                       BackgroundColor="{StaticResource corAnalogicaInput}"
                        HasShadow="true"
                        x:Name="ANALOGICA_INPUT_4">
                         <Frame.GestureRecognizers>

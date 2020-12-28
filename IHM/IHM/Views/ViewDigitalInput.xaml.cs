@@ -41,7 +41,7 @@ namespace IHM.Views
                 nameof(CardColor),
                 typeof(Color),
                 typeof(ViewDigitalInput),
-                Color.Gray);
+                Color.FromHex("FF696969"));
 
         public static readonly BindableProperty IconImageSourceProperty =
             BindableProperty.Create(

@@ -93,11 +93,20 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Image Grid.Row="0"
-                                   Grid.RowSpan="3"
-                                   Grid.Column="2"
-                                  Source="transistor_icone.png">
-                            </Image>
+                            <Frame 
+                                Grid.Row="0"
+                                Grid.RowSpan="1"
+                                Grid.Column="2"
+                                CornerRadius="5"
+                                BackgroundColor="White"
+                                HasShadow="true">
+                                <Label VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="CenterAndExpand"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"
+                                       FontSize="Large"
+                                       Text="{Binding Nome}"/>
+                            </Frame>
                         </Grid>
                     </Grid>
 
